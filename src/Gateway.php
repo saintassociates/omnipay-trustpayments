@@ -3,6 +3,7 @@
 namespace Omnipay\TrustPayments;
 
 use Omnipay\Common\AbstractGateway;
+use Omnipay\TrustPayments\Message\AuthoriseRequest;
 use Omnipay\TrustPayments\Message\CompletePurchaseRequest;
 use Omnipay\TrustPayments\Message\PurchaseRequest;
 use Omnipay\TrustPayments\Traits\GatewayParamsTrait;
@@ -42,6 +43,13 @@ class Gateway extends AbstractGateway
     public function purchase(array $parameters = [])
     {
         $request = $this->createRequest(PurchaseRequest::class, $parameters);
+
+        return $request;
+    }
+
+    public function authorise(array $parameters = [])
+    {
+        $request = $this->createRequest(AuthoriseRequest::class, $parameters);
 
         return $request;
     }
