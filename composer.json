@@ -1,0 +1,42 @@
+{
+    "name": "jonathandey/omnipay-trustpayments",
+    "type": "library",
+    "description": "TrustPayments driver for the Omnipay PHP payment processing library",
+    "keywords": [
+        "gateway",
+        "merchant",
+        "omnipay",
+        "pay",
+        "payment",
+        "purchase",
+        "trust payments"
+    ],
+    "homepage": "https://github.com/jonathandey/omnipay-trustpayments",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonathan Dey",
+            "email": "jon@jrddigital.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Omnipay\\TrustPayments\\" : "src/"
+        }
+    },
+    "require": {
+        "php": "^7.3|^8",
+        "omnipay/common": "~3.0"
+    },
+    "require-dev": {
+        "omnipay/tests": "^4.1",
+        "squizlabs/php_codesniffer": "^3",
+        "phpspec/prophecy-phpunit": "^2.0",
+        "http-interop/http-factory-guzzle": "^1.2"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": false
+        }
+    }
+}
