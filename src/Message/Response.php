@@ -58,6 +58,6 @@ class Response extends AbstractResponse implements RedirectResponseInterface
 
     public function getRedirectUrl()
     {
-        return $this->baseUrl . '/process/payments/details';
+        return $this->baseUrl . '/process/payments/choice';
     }
 }
